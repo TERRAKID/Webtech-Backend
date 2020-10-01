@@ -33,3 +33,6 @@ Route::get('/users', function()  {
     $user = \DB::table('users')->get();
     dd($user);
 });
+
+Route::get('/artists', 'App\Http\Controllers\ArtistController@index');
+Route::get('/artists/{artist}', 'App\Http\Controllers\ArtistController@show');
