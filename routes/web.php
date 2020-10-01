@@ -28,3 +28,8 @@ Route::get('/todos', function()  {
     ];
     return view('todos', $data);
 });
+
+Route::get('/users', function()  {
+    $user = \DB::table('users')->get();
+    dd($user);
+});
