@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/channels', function()  {
     return view('channels');
 });
+
+Route::get('/todos', function()  {
+    $data = [
+        "title" => "Fun stuff",
+        "todos" => ["Watch Netflix", "Listen to music", "Read a book"]
+    ];
+    return view('todos', $data);
+});
